@@ -714,7 +714,7 @@ void close_acc(){
 	}
 	else{
 		remove("temp.bin");
-		cout << "\nAccount Not Found !\n";
+		cout << "\nAccount Not Foundih !\n";
 		system("pause");
 	}
 }
