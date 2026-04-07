@@ -1,9 +1,7 @@
-#include<iostream>
-#include<limits>
-#include<iomanip>
-#include<fstream>
+#include<bits/stdc++.h>
 using namespace std;
-	// function declaration
+
+// function declaration
 void login_page();
 void admin_login();
 void admin_mainmenu();
@@ -20,8 +18,7 @@ void check_balance(int);	//for user
 void check_balance();		//for admin
 void update_name();
 void update_name(int);		//for user
-void close_acc();
-void view_acc_details(int)	//for user
+void view_acc_details(int);	//for user
 
 class Account{
 	int acc_num;
@@ -195,8 +192,7 @@ void admin_mainmenu(){
 	 			"4. VIEW ALL ACCOUNTS\n"
 	 			"5. CHECK BALANCE\n"
 	 			"6. UPDATE NAME\n"
-	 			"7. CLOSE ACCOUNT\n"
-	 			"8. EXIT";
+	 			"7. EXIT";
 	 	cout << "\nENTER TOUR CHOICE: ";
 	 	cin  >> choice;
 	 	switch(choice){
@@ -223,19 +219,15 @@ void admin_mainmenu(){
 	 		case 6:		//update accounnt holder name
 	 			update_name();
 	 			break;
-	 			
-	 		case 7:		//close account from records
-	 			close_acc();
-	 			break;
-	 			
-			case 8:		//exit program
+	 			 			
+			case 7:		//exit program
 	            cout << "EXITING...\n";
 	            break;
 	            
 	        default:
 	            cout << "INVALID CHOICE\n";
 		}
-	}while(choice!=8);
+	}while(choice!=7);
 }
 
 void user_signup(){
@@ -291,9 +283,7 @@ void user_mainmenu(int acc_num){
 	 			"2. WITHDRAW FROM ACCOUNT\n"
 	 			"3. CHECK BALANCE\n"
 	 			"4. UPDATE NAME\n"
-	 			"5. CLOSE ACCOUNT\n"
-	 			"6. CLOSE ACCOUNT\n"
-	 			"7. EXIT";
+	 			"5. EXIT";
 	 	cout << "\nENTER TOUR CHOICE: ";
 	 	cin  >> choice;
 	 	switch(choice){
@@ -314,19 +304,14 @@ void user_mainmenu(int acc_num){
 	 			update_name(acc_num);
 	 			break;
 	 			
-	 		case 5:		//delete account from records
-	 			close_acc();
-	 			break;
-	 		case 6:
-			 	
-			case 7:		//exit program
+			case 5:		//exit program
 	            cout << "EXITING...\n";
 	            break;
 	            
 	        default:
 	            cout << "INVALID CHOICE\n";
 		}
-	}while(choice!=7);
+	}while(choice!=5);
 }
 
 void new_acc(){
